@@ -3,8 +3,8 @@
 const postStatus = document.getElementById("post-status");
 const postButton = document.getElementById("post-button");
 const printPost = document.getElementById("print-post");
-const deletePost = document.getElementById("delete-post");
-const editPost = document.getElementById("edit-post");
+// const deletePost = document.getElementById("delete-post");
+// const editPost = document.getElementById("edit-post");
 const userLS = JSON.parse(localStorage.getItem('user'))
 const db = firebase.firestore();
 
@@ -16,7 +16,7 @@ const muro = document.getElementById("wall")
 postPublications.onSnapshot(querySnapshot => {
   let str = '';
   querySnapshot.forEach(doc => {
-    // console.log(doc.id, '=>', doc.data());
+    console.log(doc.id, '=>', doc.data().name);
     if (userLS.uid === doc.data().uid) {
       if (doc.data().photo === null) {
         str += `      
@@ -32,8 +32,8 @@ postPublications.onSnapshot(querySnapshot => {
           </div>
           </div>
           </div>
-          <button onclick="editPost()" id="edit-post">Editar</button>
-          <button onclick="deletePost() "id="delete-post">Borrar</button>
+          <button onclick="editPost('${doc.id}','${doc.data().post}')" class="edit-post">Editar</button>
+          <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
           </div>`
       } else {
         str += `      
@@ -49,8 +49,8 @@ postPublications.onSnapshot(querySnapshot => {
     </div>
     </div>
     </div>
-    <button onclick="editPost()" id="edit-post">Editar</button>
-    <button onclick="deletePost() "id="delete-post">Borrar</button>
+    <button onclick="editPost('${doc.id}','${doc.data().post}'))" class="edit-post">Editar</button>
+    <button onclick="deletePost('${doc.id}'))" class="delete-post">Borrar</button>
     </div>`
       }
     } else {
@@ -134,8 +134,8 @@ postButton.addEventListener("click", () => {
               </div>
             </div>
           </div>
-         <button onclick="editPost()" id="edit-post">Editar</button>
-         <button onclick="deletePost() "id="delete-post">Borrar</button>
+         <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="edit-post">Editar</button>
+         <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
         </div>`
             } else {
               str += `      
@@ -151,8 +151,8 @@ postButton.addEventListener("click", () => {
             </div>
           </div>
         </div>
-        <button onclick="editPost()" id="edit-post">Editar</button>
-         <button onclick="deletePost() "id="delete-post">Borrar</button>
+        <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="edit-post">Editar</button>
+         <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
       </div>`
             }
           } else {
@@ -198,3 +198,36 @@ postButton.addEventListener("click", () => {
   postStatus.value = '';
   muro.innerHTML = str
 });
+
+function deletePost(id){
+db.collection("/wallPost").doc(id).delete().then(function() {
+  console.log("Document successfully deleted!");
+}).catch(function(error) {
+  console.error("Error removing document: ", error);
+});
+}
+
+function editPost(id,textToPost){
+console.log('holo')
+  postStatus.value= textToPost;
+  // postButton.style.display = 'none'
+  postButton.innerHTML=`<i class="material-icons">cached</i>`;
+
+  postButton.onclick = function(){
+    var olgaRef = db.collection("/wallPost").doc(id);
+    var textToPost = postStatus.value;
+
+return olgaRef.update({
+    post: textToPost,
+})
+.then(function() {
+    console.log("Document successfully updated!");
+    postButton.innerHTML=`<i class="material-icons">add_circle_outline</i>`;
+})
+.catch(function(error) {
+    // The document probably doesn't exist.
+    console.error("Error updating document: ", error);
+});
+
+  }
+}
