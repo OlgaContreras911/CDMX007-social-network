@@ -4,6 +4,7 @@ let buttonLogOutWeb = document.getElementById('logOutWeb');
 const userImage = document.getElementById("userImage");
 const userNameP= document.getElementById("userNameP");
 const userEmailP= document.getElementById("userEmailP");
+
 //var app_fireBase;
 
 //var firebase = app_fireBase;
@@ -47,7 +48,7 @@ function logOut(){
 }
 //mainApp.logOut = logOut;
 buttonLogOut.addEventListener('click',logOut);
-
+//buttonLogOutWeb.addEventListener('click',logOutWeb);
 //function logOut(){
   //console.log('asmd')
   //firebase.auth().signOut();
