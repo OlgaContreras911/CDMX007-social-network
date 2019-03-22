@@ -49,8 +49,8 @@ postPublications.onSnapshot(querySnapshot => {
     </div>
     </div>
     </div>
-    <button onclick="editPost('${doc.id}','${doc.data().post}'))" class="edit-post">Editar</button>
-    <button onclick="deletePost('${doc.id}'))" class="delete-post">Borrar</button>
+    <button onclick="editPost('${doc.id}','${doc.data().post}')" class="edit-post">Editar</button>
+    <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
     </div>`
       }
     } else {
@@ -210,10 +210,11 @@ db.collection("/wallPost").doc(id).delete().then(function() {
 function editPost(id,textToPost){
 console.log('holo')
   postStatus.value= textToPost;
-  // postButton.style.display = 'none'
+  // postButton.style.display = 'none' sugerencia JOhn
   postButton.innerHTML=`<i class="material-icons">cached</i>`;
 
   postButton.onclick = function(){
+    console.log('HolA');
     var olgaRef = db.collection("/wallPost").doc(id);
     var textToPost = postStatus.value;
 
