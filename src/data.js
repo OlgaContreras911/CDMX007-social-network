@@ -16,7 +16,7 @@ const muro = document.getElementById("wall")
 postPublications.onSnapshot(querySnapshot => {
   let str = '';
   querySnapshot.forEach(doc => {
-    console.log(doc.id, '=>', doc.data().name);
+    // console.log(doc.id, '=>', doc.data().name);
     if (userLS.uid === doc.data().uid) {
       if (doc.data().photo === null) {
         str += `      
@@ -32,7 +32,7 @@ postPublications.onSnapshot(querySnapshot => {
           </div>
           </div>
           </div>
-          <button onclick="editPost('${doc.id}')" class="edit-post">Editar</button>
+          <button onclick="editPost('${doc.id}','${doc.data().post}')" class="edit-post">Editar</button>
           <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
           </div>`
       } else {
@@ -49,8 +49,8 @@ postPublications.onSnapshot(querySnapshot => {
     </div>
     </div>
     </div>
-    <button onclick="editPost('${doc.id}'))" class="edit-post">Editar</button>
-    <button onclick="deletePost('${doc.id}'))" class="delete-post">Borrar</button>
+    <button onclick="editPost('${doc.id}','${doc.data().post}')" class="edit-post">Editar</button>
+    <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
     </div>`
       }
     } else {
@@ -134,7 +134,7 @@ postButton.addEventListener("click", () => {
               </div>
             </div>
           </div>
-         <button onclick="editPost('${doc.id}')" class="edit-post">Editar</button>
+         <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="edit-post">Editar</button>
          <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
         </div>`
             } else {
@@ -151,7 +151,7 @@ postButton.addEventListener("click", () => {
             </div>
           </div>
         </div>
-        <button onclick="editPost('${doc.id}')" class="edit-post">Editar</button>
+        <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="edit-post">Editar</button>
          <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
       </div>`
             }
@@ -206,3 +206,31 @@ db.collection("/wallPost").doc(id).delete().then(function() {
   console.error("Error removing document: ", error);
 });
 }
+
+function editPost(id,textToPost){
+console.log('holo')
+  // postStatus.value= textToPost;
+  // postButton.style.display = 'none' sugerencia JOhn
+  postButton.innerHTML=`<i class="material-icons">cached</i>`;
+
+  postButton.onclick = function(){
+    var olgaRef = db.collection("/wallPost").doc(id);
+    // var textToPost = postStatus.value;
+    
+    return olgaRef.set({
+      
+      post: textToPost,
+    })
+    .then(function() {
+      console.log(olgaRef.id);
+    console.log("Document successfully updated!");
+    postButton.innerHTML=`<i class="material-icons">add_circle_outline</i>`;
+})
+.catch(function(error) {
+    // The document probably doesn't exist.
+    console.error("Error updating document: ", error);
+});
+
+  }
+}
+//funcionan los botones
