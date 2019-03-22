@@ -230,7 +230,6 @@ console.log('holo')
     // The document probably doesn't exist.
     console.error("Error updating document: ", error);
 });
-
   }
 }
 //funcionan los botones
