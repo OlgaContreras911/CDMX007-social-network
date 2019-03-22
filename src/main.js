@@ -48,7 +48,7 @@ function logOut(){
 }
 //mainApp.logOut = logOut;
 buttonLogOut.addEventListener('click',logOut);
-//buttonLogOutWeb.addEventListener('click',logOutWeb);
+buttonLogOutWeb.addEventListener('click',logOut);
 //function logOut(){
   //console.log('asmd')
   //firebase.auth().signOut();
