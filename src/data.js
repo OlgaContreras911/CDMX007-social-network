@@ -49,8 +49,8 @@ postPublications.onSnapshot(querySnapshot => {
     </div>
     </div>
     </div>
-    <button onclick="editPost('${doc.id}','${doc.data().post}'))" class="edit-post">Editar</button>
-    <button onclick="deletePost('${doc.id}'))" class="delete-post">Borrar</button>
+    <button onclick="editPost('${doc.id}','${doc.data().post}')" class="edit-post">Editar</button>
+    <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
     </div>`
       }
     } else {
