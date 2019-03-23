@@ -37,7 +37,15 @@ Prototipo de baja fidelidad:
 
 https://marvelapp.com/3ecjfjh/screen/54082219
 
-## Comenzando
+## Usuario modelo
+![screene](../CDMX007-social-network/imágenes/cmp.jpg) 
+
+Luis Fonseca es un joven de 26 años que trabaja como ayudante general en una empresa de transporte; ya lleva en este lugar un par de años y le gustaría mejprar su puesto, cuenta con el respaldo de su jefe, sin embargo, le ha pedido que se prepare en ciertos aspectos que le darán las herramientas necesarias para desempeñar sus nuevas actividades. Después de mcuho meditarlo, ha encontrado que lo que más le conviene es tomar cursos en línea de lo que nececesite, pues son específicos, concisos y actuales; ademaás de esto,le permíte laborar y manejar sus tiempos de una forma accesible y económica.
+
+Al momento de buscar temas que le interesan, descubre que existen muchas plataformas y cursos que ofrecen lo mismo y no sabe cual se ajustaría más a sus necesidades, quisiera encontrar un lugar en donde   se ha dado cuenta que no existe un lugar en la red en el que se pueda hablar, discutir y recomendar esta forma de estudio y aprendizaje.
+
+Se le presenta Social Learning, una red social enfocada específicamente a los cursos en línea, en esta se pueden recomendar cursos, compartir cursos y apoyarse durante la realización del mismo, Luis encuentra muy útil este espacio que le permite hablar de una forma segura y confiable, basando sus elecciones en lo que necesita para continuar su trabajo, tomando en cuenta la opinión de otras personas, evitando equivovarse y llegar a su objetivo mas rápido.
+
 ## Pre-requisitos
 ## Instalación
 ## Construido con:
