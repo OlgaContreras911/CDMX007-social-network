@@ -32,8 +32,8 @@ postPublications.onSnapshot(querySnapshot => {
           </div>
           </div>
           </div>
-          <button onclick="editPost('${doc.id}','${doc.data().post}')" class="edit-post">Editar</button>
-          <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
+          <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="waves-effect waves-teal btn-flat edit-post">Editar</button>
+         <button onclick="deletePost('${doc.id}')" class="waves-effect waves-teal btn-flat delete-post">Borrar</button>
           </div>`
       } else {
         str += `      
@@ -49,8 +49,8 @@ postPublications.onSnapshot(querySnapshot => {
     </div>
     </div>
     </div>
-    <button onclick="editPost('${doc.id}','${doc.data().post}')" class="edit-post">Editar</button>
-    <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
+    <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="waves-effect waves-teal btn-flat edit-post">Editar</button>
+         <button onclick="deletePost('${doc.id}')" class="waves-effect waves-teal btn-flat delete-post">Borrar</button>
     </div>`
       }
     } else {
@@ -93,6 +93,7 @@ postPublications.onSnapshot(querySnapshot => {
 //}
 
 // EVENTOS - Listeners
+
 postButton.addEventListener("click", () => {
   let str = ''
   const muro = document.getElementById("wall")
@@ -134,8 +135,8 @@ postButton.addEventListener("click", () => {
               </div>
             </div>
           </div>
-         <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="edit-post">Editar</button>
-         <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
+          <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="waves-effect waves-teal btn-flat edit-post">Editar</button>
+          <button onclick="deletePost('${doc.id}')" class="waves-effect waves-teal btn-flat delete-post">Borrar</button>
         </div>`
             } else {
               str += `      
@@ -151,8 +152,8 @@ postButton.addEventListener("click", () => {
             </div>
           </div>
         </div>
-        <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="edit-post">Editar</button>
-         <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
+        <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="waves-effect waves-teal btn-flat edit-post">Editar</button>
+        <button onclick="deletePost('${doc.id}')" class="waves-effect waves-teal btn-flat delete-post">Borrar</button>
       </div>`
             }
           } else {
@@ -215,7 +216,7 @@ console.log('holo')
 
   postButton.onclick = function(){
     var olgaRef = db.collection("/wallPost").doc(id);
-    // var textToPost = postStatus.value;
+     //var textToPost = postStatus.value;
     
     return olgaRef.set({
       
@@ -233,4 +234,5 @@ console.log('holo')
 
   }
 }
+
 //funcionan los botones
