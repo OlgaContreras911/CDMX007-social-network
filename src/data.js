@@ -3,13 +3,11 @@
 const postStatus = document.getElementById("post-status");
 const postButton = document.getElementById("post-button");
 const printPost = document.getElementById("print-post");
-// const deletePost = document.getElementById("delete-post");
-// const editPost = document.getElementById("edit-post");
 const userLS = JSON.parse(localStorage.getItem('user'))
 const db = firebase.firestore();
 
 // INICIALIZADOR
-//const onloadWall = () => {
+
 const bd = firebase.firestore();
 const postPublications = bd.collection('/wallPost').orderBy('created_at', "desc");
 const muro = document.getElementById("wall")
@@ -97,7 +95,6 @@ postPublications.onSnapshot(querySnapshot => {
 postButton.addEventListener("click", () => {
   let str = ''
   const muro = document.getElementById("wall")
-  // muro.innerHTML = ''
   let textToPost = postStatus.value;
 
   firebase.auth().onAuthStateChanged(async function (user) {
@@ -200,21 +197,25 @@ postButton.addEventListener("click", () => {
   muro.innerHTML = str
 });
 
-function deletePost(id){
-db.collection("/wallPost").doc(id).delete().then(function() {
+const deletePost=(id)=>{
+  let sure =confirm("¿Deseas eliminar este mensaje?");
+  if (sure) {
+db.collection("/wallPost").doc(id).delete().then(()=> {
   console.log("Document successfully deleted!");
-}).catch(function(error) {
+}).catch((error)=> {
   console.error("Error removing document: ", error);
 });
 }
 
-function editPost(id,textToPost){
+
+}
+
+const editPost=(id,textToPost)=>{
 console.log('holo')
   postStatus.value= textToPost;
-  // postButton.style.display = 'none' sugerencia JOhn
   postButton.innerHTML=`<i class="material-icons">cached</i>`;
 
-  postButton.onclick = function(){
+  postButton.onclick =()=>{
     var olgaRef = db.collection("/wallPost").doc(id);
      //var textToPost = postStatus.value;
     
@@ -222,12 +223,12 @@ console.log('holo')
       
       post: textToPost,
     })
-    .then(function() {
+    .then(()=> {
       console.log(olgaRef.id);
     console.log("Document successfully updated!");
     postButton.innerHTML=`<i class="material-icons">add_circle_outline</i>`;
 })
-.catch(function(error) {
+.catch((error)=> {
     // The document probably doesn't exist.
     console.error("Error updating document: ", error);
 });
