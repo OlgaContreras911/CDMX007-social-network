@@ -211,20 +211,19 @@ db.collection("/wallPost").doc(id).delete().then(()=> {
 }
 
 const editPost=(id,textToPost)=>{
-console.log('holo')
   postStatus.value= textToPost;
   postButton.innerHTML=`<i class="material-icons">cached</i>`;
 
   postButton.onclick =()=>{
-    var olgaRef = db.collection("/wallPost").doc(id);
+    let socialRef = db.collection("/wallPost").doc(id);
      //var textToPost = postStatus.value;
     
-    return olgaRef.set({
+    return socialRef.set({
       
       post: textToPost,
     })
     .then(()=> {
-      console.log(olgaRef.id);
+      console.log(socialRef.id);
     console.log("Document successfully updated!");
     postButton.innerHTML=`<i class="material-icons">add_circle_outline</i>`;
 })
