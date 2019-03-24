@@ -1,8 +1,8 @@
-var provider = new firebase.auth.FacebookAuthProvider();
-var provider = new firebase.auth.GoogleAuthProvider();
+//var provider = new firebase.auth.FacebookAuthProvider();
+//var provider = new firebase.auth.GoogleAuthProvider();
 
-var ui = new firebaseui.auth.AuthUI(firebase.auth());   
-var uiConfig = {
+let ui = new firebaseui.auth.AuthUI(firebase.auth());   
+let uiConfig = {
     callbacks: {
       signInSuccessWithAuthResult: ()=> {
         // User successfully signed in.

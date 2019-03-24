@@ -5,8 +5,8 @@ const userNameP= document.getElementById("userNameP");
 const userEmailP= document.getElementById("userEmailP");
 
 
-var uid = null;
-var user = firebase.auth().onAuthStateChanged
+let uid = null;
+let user = firebase.auth().onAuthStateChanged
 
 firebase.auth().onAuthStateChanged((user)=> {
   if (user) {
@@ -39,7 +39,7 @@ firebase.auth().onAuthStateChanged((user)=> {
   }
 });
 
-function logOut(){
+const logOut=()=>{
   console.log('asmd')
   firebase.auth().signOut();
 }
@@ -49,7 +49,7 @@ buttonLogOutWeb.addEventListener('click',logOut);
 
 
 document.addEventListener('DOMContentLoaded', ()=> {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
+    const elems = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(elems);
   });
 

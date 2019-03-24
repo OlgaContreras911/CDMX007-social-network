@@ -15,3 +15,4 @@ var firebase;
   const settings = {/* your settings... */ timestampsInSnapshots: true};
   firestore.settings(settings);
 
+
