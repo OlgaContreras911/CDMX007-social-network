@@ -3,20 +3,18 @@
 const postStatus = document.getElementById("post-status");
 const postButton = document.getElementById("post-button");
 const printPost = document.getElementById("print-post");
-// const deletePost = document.getElementById("delete-post");
-// const editPost = document.getElementById("edit-post");
 const userLS = JSON.parse(localStorage.getItem('user'))
 const db = firebase.firestore();
 
 // INICIALIZADOR
-//const onloadWall = () => {
+
 const bd = firebase.firestore();
 const postPublications = bd.collection('/wallPost').orderBy('created_at', "desc");
 const muro = document.getElementById("wall")
 postPublications.onSnapshot(querySnapshot => {
   let str = '';
   querySnapshot.forEach(doc => {
-    console.log(doc.id, '=>', doc.data().name);
+    // console.log(doc.id, '=>', doc.data().name);
     if (userLS.uid === doc.data().uid) {
       if (doc.data().photo === null) {
         str += `      
@@ -32,8 +30,8 @@ postPublications.onSnapshot(querySnapshot => {
           </div>
           </div>
           </div>
-          <button onclick="editPost('${doc.id}','${doc.data().post}')" class="edit-post">Editar</button>
-          <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
+          <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="waves-effect waves-teal btn-flat edit-post">Editar</button>
+         <button onclick="deletePost('${doc.id}')" class="waves-effect waves-teal btn-flat delete-post">Borrar</button>
           </div>`
       } else {
         str += `      
@@ -49,8 +47,8 @@ postPublications.onSnapshot(querySnapshot => {
     </div>
     </div>
     </div>
-    <button onclick="editPost('${doc.id}','${doc.data().post}'))" class="edit-post">Editar</button>
-    <button onclick="deletePost('${doc.id}'))" class="delete-post">Borrar</button>
+    <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="waves-effect waves-teal btn-flat edit-post">Editar</button>
+         <button onclick="deletePost('${doc.id}')" class="waves-effect waves-teal btn-flat delete-post">Borrar</button>
     </div>`
       }
     } else {
@@ -93,10 +91,10 @@ postPublications.onSnapshot(querySnapshot => {
 //}
 
 // EVENTOS - Listeners
+
 postButton.addEventListener("click", () => {
   let str = ''
   const muro = document.getElementById("wall")
-  // muro.innerHTML = ''
   let textToPost = postStatus.value;
 
   firebase.auth().onAuthStateChanged(async function (user) {
@@ -134,8 +132,8 @@ postButton.addEventListener("click", () => {
               </div>
             </div>
           </div>
-         <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="edit-post">Editar</button>
-         <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
+          <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="waves-effect waves-teal btn-flat edit-post">Editar</button>
+          <button onclick="deletePost('${doc.id}')" class="waves-effect waves-teal btn-flat delete-post">Borrar</button>
         </div>`
             } else {
               str += `      
@@ -151,8 +149,8 @@ postButton.addEventListener("click", () => {
             </div>
           </div>
         </div>
-        <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="edit-post">Editar</button>
-         <button onclick="deletePost('${doc.id}')" class="delete-post">Borrar</button>
+        <button onclick="editPost('${doc.id}', '${doc.data().post}')" class="waves-effect waves-teal btn-flat edit-post">Editar</button>
+        <button onclick="deletePost('${doc.id}')" class="waves-effect waves-teal btn-flat delete-post">Borrar</button>
       </div>`
             }
           } else {
@@ -199,35 +197,42 @@ postButton.addEventListener("click", () => {
   muro.innerHTML = str
 });
 
-function deletePost(id){
-db.collection("/wallPost").doc(id).delete().then(function() {
+const deletePost=(id)=>{
+  let sure =confirm("¿Deseas eliminar este mensaje?");
+  if (sure) {
+db.collection("/wallPost").doc(id).delete().then(()=> {
   console.log("Document successfully deleted!");
-}).catch(function(error) {
+}).catch((error)=> {
   console.error("Error removing document: ", error);
 });
 }
 
-function editPost(id,textToPost){
-console.log('holo')
+
+}
+
+const editPost=(id,textToPost)=>{
   postStatus.value= textToPost;
-  // postButton.style.display = 'none'
   postButton.innerHTML=`<i class="material-icons">cached</i>`;
 
-  postButton.onclick = function(){
-    var olgaRef = db.collection("/wallPost").doc(id);
-    var textToPost = postStatus.value;
-
-return olgaRef.update({
-    post: textToPost,
-})
-.then(function() {
+  postButton.onclick =()=>{
+    let socialRef = db.collection("/wallPost").doc(id);
+     //var textToPost = postStatus.value;
+    
+    return socialRef.set({
+      
+      post: textToPost,
+    })
+    .then(()=> {
+      console.log(socialRef.id);
     console.log("Document successfully updated!");
     postButton.innerHTML=`<i class="material-icons">add_circle_outline</i>`;
 })
-.catch(function(error) {
+.catch((error)=> {
     // The document probably doesn't exist.
     console.error("Error updating document: ", error);
 });
 
   }
 }
+
+//funcionan los botones
