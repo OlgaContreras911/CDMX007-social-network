@@ -26,12 +26,33 @@ Las redes sociales llegaron a nuestra vida para quedarse, En este sentido es imp
 
 ## Descripción
 
+Las redes sociales son estructuras sociales compuestas de grupos de personas, las cuales están conectadas por uno o varios tipos de relaciones, tales como amistad, parentesco, intereses comunes o que comparten conocimientos.
 
+Después de algunos años, las redes de interacción social se han convertido en uno de los elementos de Internet más difundidos, ofrecen a sus usuarios un lugar común para desarrollar comunicaciones constantes.
+
+Esto es posible gracias a que los usuarios no sólo pueden utilizar el servicio a través de su computadora personal, sino que además en los últimos tiempos se puede participar en este tipo de comunidades a través de una gran variedad de dispositivos móviles, tales como teléfonos celulares o computadoras portátiles, algo que está marcando la nueva tendencia en comunicación.
+
+_Un poco de historia._
+
+En el 2003 se inaugura la web _MySpace_, creada por una empresa de marketing online, su primera versión fue codificada en apenas 10 días. Tan sólo un año después, en 2004, aparece _Facebook_, concebida originalmente como una plataforma para conectar a estudiantes universitarios. Su pistoletazo de salida tuvo lugar en la Universidad de Harvard y más de la mitad de sus 19.500 estudiantes se suscribieron a ella durante su primer mes de funcionamiento. Llegamos al 2006 y con él llega la red de microblogging _Twitter_. A cuatro años de su llegada (2008) Facebook adelanta a MySpace como red social líder en cuanto a visitantes únicos mensuales, para el año 2011 Facebook tiene 600 millones de usuarios repartidos por todo el mundo, MySpace 260 millones y Twitter 190 millones.
+
+(https://histinf.blogs.upv.es/2011/12/20/redes-sociales/)
+
+_¿Cómo conociste el mercado de las redes sociales?_
+
+La primera interacción con las Redes Sociales, para un porcentaje importante de nosotros fue cuando enviamos nuestro primer correo electrónico, ya sea para cominicarnos con algún familia, con compañeros de la escuela/trabajo y/o amigos de los que hace tiempo no teníamos noticias. Después de esto internet fue evolucionando y con él, aparecieron nuevas herramientas de comunicación como Messenger, MySpace, Hi5, etc. ES común escuchar en conversaciones de ex compañeros universitarios, grupos de amigos o familiares, decir que la necesidad de tener un perfil en estas plataformas se generó a partir del uso cada vez más cotidiano que comenzaban a tener dentro de esos círculos sociales, dado que difundir información de intéres común era mucho más ágil, inmediata y hasta cirto punto, directa, esta funcionalidad genero la necesidad creciente de tener la información inmediata y aunque algunos se negaran a ser parte de la comunidad de usuarios de las redes sociales, terminaron por ceder a ello.
+
+## DESCRIPCIÓN DEL PROYECTO
+
+_Social Learning_ es pensada como una Red Social para compartir información sobre el Desarrollo web, entre estudiantes, profesionistas o académicos. 
+
+Antes de llegar a definir el producto a desarrollar, se realizó una encuesta aplicada a 54 personas. En esta encuenta recabamos información relevante a cerca del uso que se le da a la redes sociales, los temas que más atraen la atención y la relevancia que se encuentra en el uso de las mismas.
+
+_Conociendo a los usuarios_
+
+-![screen]()
 
 Prototipo de baja fidelidad:
-
-
-
  
  -![screen](../CDMX007-social-network/imágenes/bajaf1.png) 
 
@@ -56,6 +77,10 @@ Se le presenta Social Learning, una red social enfocada específicamente a los c
 
 
 
+
+#
+#
+
 # Creando una Red Social
 
 ## Preámbulo
@@ -63,19 +88,12 @@ Se le presenta Social Learning, una red social enfocada específicamente a los c
 Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
 sociales han invadido nuestras vidas. Las amamos y/u odiamos, y muchos no podemos vivir sin ellas.
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
+Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo, en una ronda de financiamiento con inversionistas, se presentó una red social para químicos en la que los usuarios podían publicar artículos sobre sus investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
+de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo más comentado.
 
 ## Introducción
 
-Una emprendedora nos ha encargado crear una red social. No nos da mucho detalle
-sobre qué tipo de red social quiere, sólo nos dice que creemos la mejor que
-podamos, y que luego la convenzamos de lanzarla al mercado. Nos da ciertos temas
-en los que le gustaría invertir:
+Una emprendedora nos ha encargado crear una red social. No nos da mucho detalle sobre qué tipo de red social quiere, sólo nos dice que creemos la mejor que podamos, y que luego la convenzamos de lanzarla al mercado. Nos da ciertos temas en los que le gustaría invertir:
 
 * Alimentación
 * Feminismo
@@ -118,10 +136,7 @@ repositorio.
 ### General
 
 En este proyecto, tú junto a tus compañeras de equipo deberán definir los
-_tests_ que consideren necesarios; puedes guiarte de los proyectos
-anteriores. Igualmente el proyecto cuenta con una estructura de carpetas
-y archivos ya definida pero pueden modificarla de acuerdo a como desean
-trabajar la estructura de su proyecto :smiley:.
+_tests_ que consideren necesarios; puedes guiarte de los proyectos anteriores. Igualmente el proyecto cuenta con una estructura de carpetas y archivos ya definida pero pueden modificarla de acuerdo a como desean trabajar la estructura de su proyecto :smiley:.
 
 ### Definición del producto
 
@@ -438,10 +453,10 @@ Otras:
 
 ### `README.md`
 
-* [ ] Definición del producto
+* [x] Definición del producto
 * [ ] Resumen de entrevistas con usuarios.
-* [ ] Link/screenshots prototipo de baja fidelidad.
-* [ ] Conclusiones de pruebas con el producto en HTML.
+* [x] Link/screenshots prototipo de baja fidelidad.
+* [x] Conclusiones de pruebas con el producto en HTML.
 
 ### Pruebas / tests
 
@@ -451,24 +466,24 @@ Otras:
 
 ### Creación de cuenta (sign up)
 
-* [ ] Permite crear cuenta.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
+* [x] Permite crear cuenta.
+* [x] Valida email.
+* [x] Valida password.
+* [x] Muestra mensajes de error.
 
 ### Inicio de sesión (sign in)
 
-* [ ] Permite iniciar sesión.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
+* [x] Permite iniciar sesión.
+* [x] Valida email.
+* [x] Valida password.
+* [x] Muestra mensajes de error.
 
 ### Muro (wall/feed)
 
-* [ ] Muestra _muro_, o lista de publicaciones.
-* [ ] Permite hacer nuevas publicaciones.
-* [ ] Permite eliminar publicaciones.
-* [ ] Pide confirmación antes de borrar publicación.
+* [x] Muestra _muro_, o lista de publicaciones.
+* [x] Permite hacer nuevas publicaciones.
+* [x] Permite eliminar publicaciones.
+* [x] Pide confirmación antes de borrar publicación.
 * [ ] Permite editar publicación en el mismo lugar (in place).
 * [ ] Permite filtrar publicaciones por público/privado.
 * [ ] Permite marcar publicaciones como _gustados_ (like, corazón, estrella,
