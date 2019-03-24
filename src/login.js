@@ -1,50 +1,16 @@
-var provider = new firebase.auth.FacebookAuthProvider();
-var provider = new firebase.auth.GoogleAuthProvider();
-//firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token. You can use it to access the Google API.
-  //var token = result.credential.accessToken;
-  // The signed-in user info.
-  //var user = result.user;
-  // ...
-//}).catch(function(error) {
-  // Handle Errors here.
-  //var errorCode = error.code;
-  //var errorMessage = error.message;
-  // The email of the user's account used.
-  //var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  //var credential = error.credential;
-  // ...
-//});
-//firebase.auth().getRedirectResult().then(function(result) {
-  //if (result.credential) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    //var token = result.credential.accessToken;
-    // ...
-  //}
-  // The signed-in user info.
-  //var user = result.user;
-//}).catch(function(error) {
-  // Handle Errors here.
-  //var errorCode = error.code;
-  //var errorMessage = error.message;
-  // The email of the user's account used.
-  //var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  //var credential = error.credential;
-  // ...
-//});
+//var provider = new firebase.auth.FacebookAuthProvider();
+//var provider = new firebase.auth.GoogleAuthProvider();
 
-var ui = new firebaseui.auth.AuthUI(firebase.auth());   
-var uiConfig = {
+let ui = new firebaseui.auth.AuthUI(firebase.auth());   
+let uiConfig = {
     callbacks: {
-      signInSuccessWithAuthResult: function() {
+      signInSuccessWithAuthResult: ()=> {
         // User successfully signed in.
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
         return true;
       },
-      uiShown: function() {
+      uiShown: ()=> {
         // The widget is rendered.
         // Hide the loader.
         document.getElementById('loader').style.display = 'none';
@@ -72,6 +38,3 @@ var uiConfig = {
   ui.start('#firebaseui-auth-container', uiConfig);
   
 
-
-
-  // comentario

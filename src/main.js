@@ -1,17 +1,14 @@
-//var mainApp = {};
 let buttonLogOut = document.getElementById('logOut');
 let buttonLogOutWeb = document.getElementById('logOutWeb');
 const userImage = document.getElementById("userImage");
 const userNameP= document.getElementById("userNameP");
 const userEmailP= document.getElementById("userEmailP");
 
-//var app_fireBase;
 
-//var firebase = app_fireBase;
-var uid = null;
-var user = firebase.auth().onAuthStateChanged
+let uid = null;
+let user = firebase.auth().onAuthStateChanged
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged((user)=> {
   if (user) {
     localStorage.setItem('user', JSON.stringify(user))
     // User is signed in.
@@ -34,7 +31,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     uid = null;
     if(location.pathname === "/src/" || location.pathname === '/src/main.html'){
       window.location.replace("index.html")
-      //  console.log('dfjp') 
+      //  console.log('ruta') 
      }
      if(location.pathname === "/CDMX007-social-network/src/" || location.pathname ==="/CDMX007-social-network/src/main.html"){
       window.location.replace("/CDMX007-social-network/src/index.html")
@@ -42,22 +39,17 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-function logOut(){
+const logOut=()=>{
   console.log('asmd')
   firebase.auth().signOut();
 }
-//mainApp.logOut = logOut;
+
 buttonLogOut.addEventListener('click',logOut);
 buttonLogOutWeb.addEventListener('click',logOut);
-//function logOut(){
-  //console.log('asmd')
-  //firebase.auth().signOut();
-//}
-//mainApp.logOut = logOut;
-//buttonLogOutWeb.addEventListener('click',logOutWeb);
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
+
+document.addEventListener('DOMContentLoaded', ()=> {
+    const elems = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(elems);
   });
 
