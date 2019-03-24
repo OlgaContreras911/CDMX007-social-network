@@ -57,7 +57,7 @@ _Conociendo a los usuarios_
 
 `Edad de los usuarios`
 
-![screen](../CDMX007-social-network/imágenes/estadísticas/edad_usuarios.png)
+![screen](../imágenes/estadísticas/edad_usuarios.png)
  
  La edad de los 54 encuestados oscila entre los 26 y los 36 años.
 
