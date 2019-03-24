@@ -1,18 +1,20 @@
 # SOCIAL NETWORK
 
 
-## Índice del proyecto de pagina
+## Índice del proyecto
 
 - [Introducción](#Introducción)
-- [Descripción](#Descripción-del-proyecto)
-- [Comenzando](#Comenzando)
-- [Pre-requisitos](#Pre-requisitos)
-- [Instalación](#Instalación)
-- [Construido con](#Construido-con)
-- [Contribuyendo](#Contribuyendo)
-- [Versionando](#Versionando)
-- [Licencia](#Licencia)
+- [Descripción](#Descripción)
+- [Acerca del producto](#Acerca-del-producto)
+- [UX/UI](#UX/IA)
+- [Historias de usuarios](#Historias-de-usuarios)
+- [Diseño la interfaz del usuario](#Diseño-de-lainterfaz-del-usuario)
+- [Herramientas](#Herramientas)
+- [Autoras](#Autoras)
 - [Agradecimientos](#Agradecimientos)
+
+
+
 
 ## Introducción
 
@@ -22,15 +24,12 @@ Pierre Levy, filósofo de origen tunecino e investigador del ciberespacio, consi
 
 Forbes, México Rubén Vázquez febrero 5, 2015 @ 2:30 pm.
 
-Las redes sociales llegaron a nuestra vida para quedarse, En este sentido es importante darles un proposito positivo para la sociedad y el individuo que la usa. Esta pagina pretende ser una red social enfocada en el tema de la educación, dirigida a estudiantes y a todo aquel que quiera aprender y compartir su aprendizaje; aprovechando los recursos en linea de clases y cursos en linea e intenta ser una forma divertida y dinamica para poder compartirlos.
-
-## Descripción
-
 Las redes sociales son estructuras sociales compuestas de grupos de personas, las cuales están conectadas por uno o varios tipos de relaciones, tales como amistad, parentesco, intereses comunes o que comparten conocimientos.
 
 Después de algunos años, las redes de interacción social se han convertido en uno de los elementos de Internet más difundidos, ofrecen a sus usuarios un lugar común para desarrollar comunicaciones constantes.
 
 Esto es posible gracias a que los usuarios no sólo pueden utilizar el servicio a través de su computadora personal, sino que además en los últimos tiempos se puede participar en este tipo de comunidades a través de una gran variedad de dispositivos móviles, tales como teléfonos celulares o computadoras portátiles, algo que está marcando la nueva tendencia en comunicación.
+
 
 _Un poco de historia._
 
@@ -38,44 +37,155 @@ En el 2003 se inaugura la web _MySpace_, creada por una empresa de marketing onl
 
 (https://histinf.blogs.upv.es/2011/12/20/redes-sociales/)
 
+## Descripción
+
+Las redes sociales llegaron a nuestra vida para quedarse, En este sentido es importante darles un proposito positivo para la sociedad y el individuo que la usa. Esta pagina pretende ser una red social enfocada en el tema de la educación, dirigida a estudiantes y a todo aquel que quiera aprender y compartir su aprendizaje; aprovechando los recursos en linea de clases y cursos en linea e intenta ser una forma divertida y dinamica para poder compartirlos.
+
 _¿Cómo conociste el mercado de las redes sociales?_
 
 La primera interacción con las Redes Sociales, para un porcentaje importante de nosotros fue cuando enviamos nuestro primer correo electrónico, ya sea para cominicarnos con algún familia, con compañeros de la escuela/trabajo y/o amigos de los que hace tiempo no teníamos noticias. Después de esto internet fue evolucionando y con él, aparecieron nuevas herramientas de comunicación como Messenger, MySpace, Hi5, etc. ES común escuchar en conversaciones de ex compañeros universitarios, grupos de amigos o familiares, decir que la necesidad de tener un perfil en estas plataformas se generó a partir del uso cada vez más cotidiano que comenzaban a tener dentro de esos círculos sociales, dado que difundir información de intéres común era mucho más ágil, inmediata y hasta cirto punto, directa, esta funcionalidad genero la necesidad creciente de tener la información inmediata y aunque algunos se negaran a ser parte de la comunidad de usuarios de las redes sociales, terminaron por ceder a ello.
 
-## DESCRIPCIÓN DEL PROYECTO
+## Acerca del producto
 
 _Social Learning_ es pensada como una Red Social para compartir información sobre el Desarrollo web, entre estudiantes, profesionistas o académicos. 
 
 Antes de llegar a definir el producto a desarrollar, se realizó una encuesta aplicada a 54 personas. En esta encuenta recabamos información relevante a cerca del uso que se le da a la redes sociales, los temas que más atraen la atención y la relevancia que se encuentra en el uso de las mismas.
 
+## UX/UI
+
 _Conociendo a los usuarios_
 
--![screen]()
+`Edad de los usuarios`
 
-Prototipo de baja fidelidad:
+![screen](../CDMX007-social-network/imágenes/estadísticas/edad_usuarios.png)
  
- -![screen](../CDMX007-social-network/imágenes/bajaf1.png) 
+ La edad de los 54 encuestados oscila entre los 26 y los 36 años.
 
-https://marvelapp.com/3ecjfjh/screen/54082219
+`Género de los usuarios`
 
-## Usuario modelo
-![screene](../CDMX007-social-network/imágenes/cmp.jpg) 
+![screen](../CDMX007-social-network/imágenes/estadísticas/género_usuarios.png)
 
-Luis Fonseca es un joven de 26 años que trabaja como ayudante general en una empresa de transporte; ya lleva en este lugar un par de años y le gustaría mejprar su puesto, cuenta con el respaldo de su jefe, sin embargo, le ha pedido que se prepare en ciertos aspectos que le darán las herramientas necesarias para desempeñar sus nuevas actividades. Después de mcuho meditarlo, ha encontrado que lo que más le conviene es tomar cursos en línea de lo que nececesite, pues son específicos, concisos y actuales; ademaás de esto,le permíte laborar y manejar sus tiempos de una forma accesible y económica.
+Entre nuestros encuestados es mayor el procentaje de mujeres. 
 
-Al momento de buscar temas que le interesan, descubre que existen muchas plataformas y cursos que ofrecen lo mismo y no sabe cual se ajustaría más a sus necesidades, quisiera encontrar un lugar en donde   se ha dado cuenta que no existe un lugar en la red en el que se pueda hablar, discutir y recomendar esta forma de estudio y aprendizaje.
+`Ocupación de los usuarios`
 
-Se le presenta Social Learning, una red social enfocada específicamente a los cursos en línea, en esta se pueden recomendar cursos, compartir cursos y apoyarse durante la realización del mismo, Luis encuentra muy útil este espacio que le permite hablar de una forma segura y confiable, basando sus elecciones en lo que necesita para continuar su trabajo, tomando en cuenta la opinión de otras personas, evitando equivovarse y llegar a su objetivo mas rápido.
+![screen](../CDMX007-social-network/imágenes/estadísticas/ocupación_tabla.png)
+![screen](../CDMX007-social-network/imágenes/estadísticas/ocupación2.png)
 
-## Pre-requisitos
-## Instalación
-## Construido con:
-## Contribuyendo
-## Versionando
-## Licencia
-## Agradecimientos
+Un porcentaje alto de nuestros encuestados forma parte de la Población Económicamente Activa, mientras que otro procentaje menor, pero igualmente significativo son estudiantes de distintas ciencias.
+
+`Uso de redes sociales`
+
+![screen](../CDMX007-social-network/imágenes/estadísticas/uso_redes.png)
+
+De la totalidad de encuestados el 96.3% dijo que sí utiliza alguna red social.
+
+`Actividad realizada en redes sociales`
+
+![screen](../CDMX007-social-network/imágenes/estadísticas/actividad_realizada.png)
+
+Una de las preguntas de nuestra encuesta está dirigida a saber cuáles son las actividades que los usuarios de las Redes Sociales, la información recabada señala que el 55.6% acostumbra leer artículos informativos sobre temas de interés particular.
 
 
+`Tema de red social`
+
+![screen](../CDMX007-social-network/imágenes/estadísticas/tema_redsocial.png)
+
+Buscamos conocer más sobre los intereses de nuestros usuarios, porque se les pregunto _"Si pudieran elegir alguno, ¿Qué enfoque le darían a una red social?"_ a lo que el 40.7% señalo que le darían un enfoque educativo, el 20.4% sobre energías renovables y el 18.5% sobre salud.
+
+`Contactos más frecuentes`
+![screen](../CDMX007-social-network/imágenes/estadísticas/contactos_frecuentes.png)
+
+Entre los contactos más frecuentes, nuestros encuestados señalaron tener en su mayoría a amigos, personas de su confíanza y con quienes tienen contacto face to face.
+
+`Lo que más te gusta`
+
+![screen](../CDMX007-social-network/imágenes/estadísticas/mas_agrada.png)
+La característica que parece más atractiva a las usuarios encuestados es el poder compartir información en tiempo real, como notas informativas, comunicarse con otros y la facilidad para difundir masivamente. La segunda característica más atractiva es la conexión que existe con personas que están a una gran distancia geográfica.
+
+`Lo que más desagrada`
+![screen](../CDMX007-social-network/imágenes/estadísticas/desagrada.png)
+
+Como era de esperarse, no todas las características de las redes sociales son agradables para sus usuarios. En esta encuesta, los usuarios señalaron con frecuencia que no les agrada es que pueden llegar a encontrar información falsa que se difunde de forma indiscriminada, desearía poder comprobar la veracidad de la información.
+
+`Red de más uso`
+![screen](../CDMX007-social-network/imágenes/estadísticas/mas_uso.png)
+
+La tercera parte de nuestros encuestados señala hacer un mayor uso de Facebook, por encima de otras redes sociales, ya que les parece fácil de usar; por la capacidad de conectar a más personas; porque es fácil compartir información de todo tipo sin límite de carácteres; porque permite hacer redes en distintos círculos sociales, como el laboral; porque tiene contenido entretenido para todos los gustos y porque es de las más popolares.
+
+
+A partir de la encuesta realizada y el análisis de la información recabada en ella, fue como se decidió crear `Social Learning`, una red social enfocada a compartir información a cerca de cursos en línea, notas informativas, noticias, etc., de fuentes confiables, verídicas y que sean difundidas por personas de confianza, sobre estos mismo cursos o sitios que ofrecen herramientas para el autoaprendizaje.
+
+_Usuario modelo_
+
+![screen](../CDMX007-social-network/imágenes/cmp.jpg) 
+
+Luis Fonseca es un joven de 26 años que trabaja como ayudante general en una empresa de transporte; ya lleva en este lugar un par de años y le gustaría mejorar su calidad de vida ascendiendo a un puesto mejor, cuenta con el respaldo de su jefe, sin embargo, le ha pedido que se prepare en ciertos aspectos que le darán las herramientas necesarias para desempeñar sus nuevas actividades, le ha sugerido tomar un diplomado o un curso, pero Luis no tiene los recursos econímicos para pagar un diplomado y tampoco cuenta con tiempo suficiente, además le es más fácil aprender por su cuenta. Después de mucho meditarlo, ha encontrado que lo que más le conviene es tomar cursos en línea de lo que nececesite, pues son específicos, concisos y actuales; ademaás de esto,le permíte laborar y manejar sus tiempos de una forma accesible y económica.
+
+Al momento de buscar temas que le interesan, descubre que existen muchas plataformas y cursos que ofrecen lo mismo y no sabe cual se ajustaría más a sus necesidades, quisiera encontrar un lugar en la red en el que se pueda hablar, discutir y recomendar esta forma de estudio y aprendizaje.
+
+Se le presenta Social Learning, una red social enfocada específicamente a los cursos en línea, en esta se pueden recomendar y compartir cursos, recibiendo apoyo durante la realización del mismo. Luis encuentra muy útil este espacio que le permite hablar de una forma segura y confiable, basando sus elecciones en lo que necesita para continuar su trabajo, tomando en cuenta la opinión de otras personas, evitando equivovarse y llegar a su objetivo mas rápido.
+
+_Antecedentes_
+
+Los usuarios no confían en toda la información que se comparte en redes sociales porque no es posible comprobar su veracidad, necesitan un lugar enfocado a comartir información específica.
+
+_Problemas que presenta el usuario_
+
+No exixsten redes sociales en las que sólo se comparte información de sitios o plataformas que controbuyan al autoaprendizaje.
+
+_Objetivos del usuario_
+
+Encontrar información verídica sobre sitios en los que pueda acceder a cursos en línea, noticias o información para fomentar el autoaprendizaje en temas de su interés que sean compartidos por personas confiables.
+
+
+## Historias de usuario
+
+* Yo como usuario quiero poder crear una cuenta nueva.
+* Yo como usuario quiero poder registrarme con mi correo electrónico, cuenta de gmail o de Facebook.
+* Yo como usuario quiero poder crear una nueva publicación.
+* Yo como usuario quiero poder editar una publicación después de haberla posteado.
+* Yo como usuario quiero poder eliminar una publicación que hice anteriormente.
+* Yo como usuario quiero ver un mensaje en la pantalla principal que pida mi confimación antes de eliminar una publicación. 
+
+_Definición de terminado_
+
+* La pantalla de inicio de la Web App tendrá opciones, entre las que el usuario podrá elegir ingresar con una cuenta de email, gmail, facebook
+* En el muro de la red social se encontrará un input en el que el usuario podrá escribir el mensaje que desea compartir.
+* En cada publicación hecha por el usuario aparecerá un botón que permitirá editar la publicación después de haberse realizado.
+En cada publicación aparecerá un botón que permitirá eliminar la publicación si así lo desea el usuario. Esta opción tendrá una alerta que confirmará que el usuario quiere borrar la publicación.
+
+
+## Diseño la interfaz del usuario
+
+`Prototipo de baja fidelidad:`
+ 
+ -![baja fidelidad](../CDMX007-social-network/imágenes/bajaf1.png) 
+
+[Prototipo de baja fidelidad](https://marvelapp.com/3ecjfjh/screen/54082219)
+
+`Prototipo de alta fidelidad:`
+-![alta_fidelidad](../CDMX007-social-network/imágenes/alta_fidelidad/galaxyS5.png)
+
+[Prototipo de alta fidelidad](https://marvelapp.com/project/3871526/)
+
+### Herramientas
+
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Google Forms](https://docs.google.com)
+- [Materialize](https://materializecss.com/)
+- [Javascript vanilla](http://vanilla-js.com/)
+- [CSS](https://www.w3schools.com/css/)
+- [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+### Autoras
+Olga Contreras, Elizabeth Ramírez y Giovanna González.
+
+### Agradecimientos
+A todo el equipo de Laboratoria.
 
 
 #
