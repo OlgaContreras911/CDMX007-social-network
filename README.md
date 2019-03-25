@@ -94,6 +94,7 @@ Una de las preguntas de nuestra encuesta está dirigida a saber cuáles son las 
 Buscamos conocer más sobre los intereses de nuestros usuarios, porque se les pregunto _"Si pudieran elegir alguno, ¿Qué enfoque le darían a una red social?"_ a lo que el 40.7% señalo que le darían un enfoque educativo, el 20.4% sobre energías renovables y el 18.5% sobre salud.
 
 `Contactos más frecuentes`
+
 ![screen](https://i.ibb.co/TMprKVd/contactos-frecuentes.png)
 
 Entre los contactos más frecuentes, nuestros encuestados señalaron tener en su mayoría a amigos, personas de su confíanza y con quienes tienen contacto face to face.
@@ -101,14 +102,17 @@ Entre los contactos más frecuentes, nuestros encuestados señalaron tener en su
 `Lo que más te gusta`
 
 ![screen](https://i.ibb.co/mBxBGRV/mas-agrada.png)
+
 La característica que parece más atractiva a las usuarios encuestados es el poder compartir información en tiempo real, como notas informativas, comunicarse con otros y la facilidad para difundir masivamente. La segunda característica más atractiva es la conexión que existe con personas que están a una gran distancia geográfica.
 
 `Lo que más desagrada`
+
 ![screen](https://i.ibb.co/PC8hDFc/desagrada.png)
 
 Como era de esperarse, no todas las características de las redes sociales son agradables para sus usuarios. En esta encuesta, los usuarios señalaron con frecuencia que no les agrada es que pueden llegar a encontrar información falsa que se difunde de forma indiscriminada, desearía poder comprobar la veracidad de la información.
 
 `Red de más uso`
+
 ![screen](https://i.ibb.co/28ZhGm2/mas-uso.png)
 
 La tercera parte de nuestros encuestados señala hacer un mayor uso de Facebook, por encima de otras redes sociales, ya que les parece fácil de usar; por la capacidad de conectar a más personas; porque es fácil compartir información de todo tipo sin límite de carácteres; porque permite hacer redes en distintos círculos sociales, como el laboral; porque tiene contenido entretenido para todos los gustos y porque es de las más popolares.
@@ -165,9 +169,10 @@ En cada publicación aparecerá un botón que permitirá eliminar la publicació
 [Prototipo de baja fidelidad](https://marvelapp.com/3ecjfjh/screen/54082219)
 
 `Prototipo de alta fidelidad:`
--![alta_fidelidad](https://i.ibb.co/1dn4C8H/galaxyS5.png)
+Después de testear el producto con usuarios interesados en la aplicación, ellos eligieron el color verde que asociaban con aprendizaje, se agregó un logo para  que la aplicación se reconozca fácilmente y se asocie, se probaron distintas propuestas y esta que se presenta fue la más aceptada; se agregó un menú desplegable en la que se pueden los datos más importantes de cada usuario, se optó por un muro en el que se pueden observar todos los mensajes, así como la posibilidad de editar y eliminar los mensajes cunado el usuario lo desee.   
+-![alta_fidelidad](https://i.ibb.co/r2MLz4z/PA.jpg)
 
-[Prototipo de alta fidelidad](https://marvelapp.com/project/3871526/)
+[Prototipo de alta fidelidad](https://marvelapp.com/5daa2ei/screen/54794088)
 
 ### Herramientas
 
